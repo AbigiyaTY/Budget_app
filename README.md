@@ -127,6 +127,7 @@ Install this project with **[package manager]**:
   cd Budget_app
   gem install
   rails db:migrate
+  rails db:migrate RAILS_ENV=test
 ```
 
 ### Usage
