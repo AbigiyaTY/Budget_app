@@ -87,8 +87,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
  
+- [Live Demo Link](https://budget-app-ybru.onrender.com/)
 
-- [Live Demo Link](https://drive.google.com/file/d/1nzuq6zkgsB7Z6hqGqdmswTAGJ8MZlpFH/view?usp=sharing)
+- [Video Demo Link](https://drive.google.com/file/d/1nzuq6zkgsB7Z6hqGqdmswTAGJ8MZlpFH/view?usp=sharing)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
