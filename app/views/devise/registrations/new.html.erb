@@ -1,0 +1,36 @@
+<div class= "container-fluid singup">
+<div class= "row">
+<i class="fa-light fa-arrow-left col-4"></i>
+<h5 class="py-3 col-8">Registration</h5>
+</div>
+</div>
+<br>
+
+<div class= "container bgColor">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row"> 
+<div class="col-2"> </div>
+<div class="col-10"> 
+
+  <div class="field my-1">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name" , classs: 'py-5' %>
+  </div>
+  <div class="field my-1">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"  %>
+  </div>
+  <div class="field my-1">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password"  %>
+  </div>
+  <div class="field my-1">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmation Password"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up", class: 'submit p-1' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+<div class="col-2"> </div>
+</div>
