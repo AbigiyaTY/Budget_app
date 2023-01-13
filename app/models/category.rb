@@ -1,8 +1,16 @@
 class Category < ApplicationRecord
   belongs_to :user
-  has_many :groups_categories
-  has_many :groups
+  has_many :category_payments
+  has_many :payments, through: :category_payments
 
   validates :name, presence: true
-  validates :amount, presence: true
+  validates :icon, presence: true
+
+  def calculate_transaction
+    sum = 0
+    payments.each do |x|
+      sum += x.amount
+    end
+    sum
+  end
 end

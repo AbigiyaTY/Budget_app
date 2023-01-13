@@ -16,29 +16,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_084319) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.integer "amount"
+    t.string "icon"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "groups", force: :cascade do |t|
-    t.string "name"
-    t.string "icon"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_groups_on_user_id"
-  end
-
-  create_table "groups_categories", force: :cascade do |t|
-    t.bigint "group_id", null: false
+  create_table "category_payments", force: :cascade do |t|
+    t.bigint "payment_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_groups_categories_on_category_id"
-    t.index ["group_id"], name: "index_groups_categories_on_group_id"
+    t.index ["category_id"], name: "index_category_payments_on_category_id"
+    t.index ["payment_id"], name: "index_category_payments_on_payment_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_084319) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "groups", "users"
-  add_foreign_key "groups_categories", "categories"
-  add_foreign_key "groups_categories", "groups"
+  add_foreign_key "category_payments", "categories"
+  add_foreign_key "category_payments", "payments"
+  add_foreign_key "payments", "users"
 end

@@ -5,8 +5,86 @@
   padding: 0;
 }
 
+body {
+  background-color: #fff;
+}
+
+.title {
+  color: #fff !important;
+}
+
+.splashTitle {
+  border: 1px solid #fff;
+  background-color: #3571b9;
+  color: #fff;
+}
+
+.splashContent,
+.splashContent div {
+  background-color: #fff;
+  border: 1px solid #3571b9;
+}
+
+.splashContent div a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #3571b9;
+}
+
+.field input {
+  border-color: #3571b9;
+}
+
 .singup,
 input.submit {
   background-color: #3571b9;
   color: #fff;
+}
+
+.signinAs {
+  font-size: 10px;
+}
+
+.categorieContainer {
+  border: 2px solid #3571b9;
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+  margin-bottom: 7px;
+}
+
+.newCategorie {
+  background-color: #fff;
+}
+
+.titleCategorie {
+  padding-bottom: 5px;
+  color: #3571b9;
+}
+
+.link-whiteArrow {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.col-4.py-3,
+.col-5.py-3,
+.categorieContainer.p-4,
+input#categorie_name::placeholder,
+input#categorie_icon::placeholder,
+input#transaction_name::placeholder,
+#transaction_category::placeholder,
+label,
+select#transaction_category::placeholder,
+option,
+input#transaction_amount::placeholder {
+  color: #3571b9;
+}
+
+@media (min-width: 768px) {
+  .img {
+    width: 200px;
+    height: 100px;
+  }
 }

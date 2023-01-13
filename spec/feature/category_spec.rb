@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
-  subject(:category) { Category.create(name: 'Bodyshop cream', amount: 45, user_id: 1) }
+RSpec.describe Category, type: :system do
+  subject(:category) { Category.create(name: 'Food', icon: 'https://freepngimg.com/download/burger/6-2-burger-png-image.png', user_id: 1) }
 
   it 'should not be empty' do
     category.name = nil
@@ -9,16 +9,16 @@ RSpec.describe Category, type: :model do
   end
 
   it 'should have the right value' do
-    expect(category.name).to eq('Bodyshop cream')
+    expect(category.name).to eq('Food')
   end
 
   it 'should not be empty' do
-    category.amount = nil
+    category.icon = nil
     expect(category).to_not be_valid
   end
 
   it 'should have the right value' do
-    expect(category.amount).to eq(45)
+    expect(category.icon).to eq('https://freepngimg.com/download/burger/6-2-burger-png-image.png')
   end
 
   it 'should have user id 1' do
