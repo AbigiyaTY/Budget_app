@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  protect_from_forgery
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, alert: exception.message
+  def after_sign_in_path_for(_resource)
+    categories_path
   end
 
   def configure_permitted_parameters
@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     end
 
     devise_parameter_sanitizer.permit(:sign_in) do |user_params|
-      user_params.permit(:email, :password, :remember_me)
+      user_params.permit(:name, :email, :password, :remember_me)
     end
   end
 end
