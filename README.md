@@ -91,7 +91,8 @@
 **To get a local copy up and running, follow these steps.**
 1. Open terminal or cmd on you local machine and navigate to your desired directory.
 2. **Run**    *'git clone clone https://github.com/AbigiyaTY/Budget_app.git'*
-3. **Run**   *'code .'*
+3. **Run**   *'cd Budget_app'*
+4. **Run**   *'code .'*
 
 ### Prerequisites
 
