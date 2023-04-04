@@ -1,6 +1,6 @@
 ## Copyright 2023, [Abigiya Tadesse]
 
-### Budget App can be a webpage/website, a web app, a software and so on
+##### Budget App can be a webpage/website, a web app, a software and so on
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this [Budget App] and associated documentation files, to deal in the [Budget App] without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [Budget App], and to permit persons to whom the [Budget App] is furnished to do so, subject to the following conditions:
 
