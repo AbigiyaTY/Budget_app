@@ -80,8 +80,6 @@
  
 - [Live Demo Link](https://budget-app-ybru.onrender.com/)
 
-- [Video Demo Link]()
-
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- GETTING STARTED -->
